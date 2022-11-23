@@ -1,0 +1,31 @@
+version: '3.1'
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+    environment:
+
+      MYSQL_ROOT_PASSWORD: quimica
+    volumes:
+      - microservices_devdojo:/var/lib/mysql
+
+volumes:
+  microservices_devdojo:
+# instalar - spring Assistant
+#Lombok
+#Greenwich.SR1 ao invez de Greenwich.RELEASE
+#Ctrl+Shift+A pesquisando por Run Dashboard
+# sudo service mysql stop -
+# sudo ss -ntlp| grep 3306 verifica a porta
+# docker-compose -f stack.yml up
+# docker rn - + id remove container
+# docker ps -a -  lista todos os containers
+#  docker images - lista todas as imagens
+# docker rmi + id da imagem remove
+# docker inspect <container id> | grep "IPAddress" saber o endereço IP do cantainer
+# doker run -e MYSQL_ROOT_PASSWORD=quimica mysql
+# mvn clean install -DskipTests - caso o banco não estiver rodando
+# mvn clean install - caso o banco estaje rodando
+
